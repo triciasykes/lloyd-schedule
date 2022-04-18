@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: 2022-04-18 08:44:02
+  duration: 1
+  price: 1
+
+two:
+  time: 2022-04-18 08:44:02
+  duration: 1
+  price: 1
