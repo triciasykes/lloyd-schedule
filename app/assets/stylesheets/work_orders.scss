@@ -80,6 +80,8 @@
 }
 
 .appointments > div {
+    display:grid;
+    grid-template-rows: repeat(2, 50%);
     border-left: 1px solid #474747;
     border-bottom: 1px solid #474747;
     text-align: center;
@@ -88,4 +90,5 @@
 .appointments > div:nth-child(even) {
         background-color: #e0e0e0;
 }
+
 

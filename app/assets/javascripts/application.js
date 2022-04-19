@@ -41,6 +41,20 @@ document.addEventListener('DOMContentLoaded', () => {
         return startTime
     }
 
+    const getLength = (duration) => {
+        let row = 60
+        let result
+        let length = duration / row
+        if (Number.isInteger(length)) {
+            result = length
+        } else if (1 < length < 2) {
+            result = 2
+        } else {
+            result = 1
+        }
+        return result
+    }
+
     let allTimes = {
         "06": 1,
         "07": 2,
@@ -65,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const newAppointment = document.querySelector('.appointments')
         const apptDiv = document.createElement('div')
         apptDiv.className = 'appointment'
-        apptDiv.style = `grid-row: ${row}/span ${length};grid-column:${column}; background-color:cornflowerBlue;`
-        apptDiv.innerHTML = `${order.time}` + '<br>' + `${order.location.name}` + '<br>' + `${order.duration} minutes` + '<br>' + `$${order.price}`
+        apptDiv.style = `grid-row: ${row}/span ${length};grid-column:${order.technician_id}; background-color:cornflowerBlue;`
+        apptDiv.innerHTML =  `${order.location.name}` + '<br>' + `${order.duration} minutes` + '<br>' + `$${order.price}`
         newAppointment.appendChild(apptDiv)
     }
 
@@ -81,8 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     let startTime = getStartTime(order.time)
                     // let time = convertDateTimeToISO(order.time)
                     row = allTimes[startTime],
-                        console.log(row)
-                    length = order.duration / 60,
+                        length = getLength(order.duration),
                         column = order.technician_id,
                         buildAppointment(order)
                 })
@@ -90,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     getWorkOrders()
 
-    const getStartAndEndTimes = (order) => {
+    const getEndTimes = (order) => {
         let startTime = convertISODate(order.time)
         console.log(startTime)
         //
