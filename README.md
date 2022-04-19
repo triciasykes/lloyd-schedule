@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Get Started:
 
-Things you may want to cover:
+git clone
 
-* Ruby version
+add the following gems:
+<!-- for importing the csv files -->
+    gem 'csv', '~> 3.0'
 
-* System dependencies
+<!-- for testing  -->
+    gem 'rails-controller-testing'
+    gem 'minitest'  
+    gem 'minitest-reporters'
 
-* Configuration
+<!-- rake task to import data from csv files to database -->
+run rails update:import_all
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
 
 * ...
