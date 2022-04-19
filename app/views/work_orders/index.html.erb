@@ -1,0 +1,31 @@
+<div class="schedule-container">
+    <div class="header-text"></div>
+    <div class="schedule">
+        <div class="empty"></div>
+        <div class="techs">
+            <% @technicians.each_with_index do |tech, index| %>
+            <div class="col column-<%= index+1 %> name-text"><%= tech.name %></div>
+            <% end %>
+        </div>
+        <div class='time'>
+            <div class="row row-1">06:00</div>
+            <div class="row row-2">07:00</div>
+            <div class="row row-3">08:00</div>
+            <div class="row row-4">09:00</div>
+            <div class="row row-5">10:00</div>
+            <div class="row row-6">11:00</div>
+            <div class="row row-7">12:00</div>
+            <div class="row row-8">13:00</div>
+            <div class="row row-9">14:00</div>
+            <div class="row row-10">15:00</div>
+            <div class="row row-11">16:00</div>
+           
+        </div>
+        <div class="appointments">
+            <% 44.times do |i|  %>
+            <div id="<%= i+1 %>"></div>
+            <% end %>
+
+        </div>
+    </div>
+</div>
