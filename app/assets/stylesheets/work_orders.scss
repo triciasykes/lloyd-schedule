@@ -39,6 +39,7 @@
 .empty {
     display: grid;
     grid-area: empty;
+    border-bottom: #474747;
 }
 
 .techs {
@@ -81,9 +82,10 @@
 .appointments > div {
     border-left: 1px solid #474747;
     border-bottom: 1px solid #474747;
-
+    text-align: center;
 }
         
 .appointments > div:nth-child(even) {
         background-color: #e0e0e0;
 }
+
