@@ -7,7 +7,4 @@ class WorkOrdersControllerTest < ActionDispatch::IntegrationTest
       assert_response :success
     end
 
-    test 'it should get all technicians'
-      
-    end
 end

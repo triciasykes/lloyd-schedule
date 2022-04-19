@@ -14,3 +14,16 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const setDate = () => {
+        const date = new Date(2019, 9, 19, 8, 0, 0, 0)
+        const newDate = date.toLocaleDateString()
+        const titleDiv = document.querySelector(".header-text")
+        titleDiv.innerHTML = `Work Orders for ${newDate}`
+    }
+    setDate()
+
+})
